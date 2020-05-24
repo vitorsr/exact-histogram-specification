@@ -1,0 +1,13 @@
+name: imageio
+channels:
+  - defaults
+dependencies:
+  - black
+  - conda-forge::flake8-bugbear
+  - imageio
+  - ipython
+  - numba
+  - pep8-naming
+  - pytest
+  - pyyaml
+  - rope
