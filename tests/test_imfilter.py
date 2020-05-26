@@ -24,5 +24,7 @@ B.append(array([[5.4, 4.9, 4.5], [3.85, 4.85, 5.8], [4.75, 5.45, 5.5]]))
 def test_imfilter():
     for m in range(len(A)):
         for n in range(len(h)):
+            # Integer A.
             assert_array_almost_equal(imfilter(A[m], h[n]), B[m * len(h) + n])
+            # Floating-point A.
             assert_array_almost_equal(imfilter(1.0 * A[m], h[n]), B[m * len(h) + n])

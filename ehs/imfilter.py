@@ -1,10 +1,10 @@
-from numpy import array, block, float64, pad, roll, rot90, zeros
+from numpy import array, block, pad, roll, rot90, zeros
 from numpy.fft import fft2, ifft2
 
 
 def imfilter(A, h):
     """B = imfilter(A, h, "replicate")"""
-    A = A.copy().astype(float64)
+    A = A.copy().astype("float64")
     h = rot90(h, k=2).copy()
 
     r = array(h.shape) // 2  # Radius.
